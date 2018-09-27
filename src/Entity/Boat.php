@@ -1,110 +1,193 @@
 <?php
+
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\BoatRepository")
+ */
 class Boat
 {
-
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
     private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $name;
-    private $price;
+
+    /**
+     * @ORM\Column(type="text")
+     */
     private $description;
-    private $type;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $picture;
 
     /**
-     * @return mixed
+     * @ORM\Column(type="integer")
      */
-    public function getId()
+    private $price;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $materials;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $Length;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $Width;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $Weight;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $berths;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $propulsion;
+
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     */
-    public function setId($id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
+    public function getName(): ?string
     {
         return $this->name;
     }
 
-    /**
-     * @param mixed $name
-     */
-    public function setName($name): void
+    public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * @param mixed $price
-     */
-    public function setPrice($price): void
-    {
-        $this->price = $price;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDescription()
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    /**
-     * @param mixed $description
-     */
-    public function setDescription($description): void
+    public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param mixed $type
-     */
-    public function setType($type): void
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPicture()
+    public function getPicture(): ?string
     {
         return $this->picture;
     }
 
-    /**
-     * @param mixed $picture
-     */
-    public function setPicture($picture): void
+    public function setPicture(string $picture): self
     {
         $this->picture = $picture;
+
+        return $this;
     }
 
+    public function getPrice(): ?int
+    {
+        return $this->price;
+    }
+
+    public function setPrice(int $price): self
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getMaterials(): ?string
+    {
+        return $this->materials;
+    }
+
+    public function setMaterials(string $materials): self
+    {
+        $this->materials = $materials;
+
+        return $this;
+    }
+
+    public function getLength(): ?float
+    {
+        return $this->Length;
+    }
+
+    public function setLength(float $Length): self
+    {
+        $this->Length = $Length;
+
+        return $this;
+    }
+
+    public function getWidth(): ?float
+    {
+        return $this->Width;
+    }
+
+    public function setWidth(float $Width): self
+    {
+        $this->Width = $Width;
+
+        return $this;
+    }
+
+    public function getWeight(): ?float
+    {
+        return $this->Weight;
+    }
+
+    public function setWeight(float $Weight): self
+    {
+        $this->Weight = $Weight;
+
+        return $this;
+    }
+
+    public function getBerths(): ?int
+    {
+        return $this->berths;
+    }
+
+    public function setBerths(int $berths): self
+    {
+        $this->berths = $berths;
+
+        return $this;
+    }
+
+    public function getPropulsion(): ?string
+    {
+        return $this->propulsion;
+    }
+
+    public function setPropulsion(string $propulsion): self
+    {
+        $this->propulsion = $propulsion;
+
+        return $this;
+    }
 }

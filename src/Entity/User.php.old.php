@@ -1,7 +1,7 @@
 <?php
 namespace App\Entity;
 
-class User
+class User_old
 {
     private $id;
     private $email;

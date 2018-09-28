@@ -22,7 +22,7 @@ class BoatRepository extends ServiceEntityRepository
 //    /**
 //     * @return Boat[] Returns an array of Boat objects
 //     */
-    /*
+
     public function findByExampleField($value)
     {
         return $this->createQueryBuilder('b')
@@ -34,7 +34,7 @@ class BoatRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
-    */
+
 
     /*
     public function findOneBySomeField($value): ?Boat

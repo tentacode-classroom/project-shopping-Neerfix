@@ -32,7 +32,7 @@ class Boat
     private $picture;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", length=15)
      */
     private $price;
 

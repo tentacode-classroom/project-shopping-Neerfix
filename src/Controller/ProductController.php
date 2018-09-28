@@ -11,6 +11,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\BoatRepository;
+use App\Entity\Boat;
 
 class ProductController extends AbstractController
 {
@@ -19,11 +20,18 @@ class ProductController extends AbstractController
      */
     public function index(int $productId)
     {
-        $boatRepository = new BoatRepository();
-        $boat = $boatRepository->findOneById($productId);
+        $boat = $this->getDoctrine()->getRepository(Boat::class)->find($productId);
 
-        return $this->render('product/detail.html.twig', [
+        if(!$boat){
+            var_dump($boat);
+            throw $this->createNotFoundException('No product with id ' . $productId);
+        }
+
+        $data = [
+            'slug' => $productId,
             'boat' => $boat,
-        ]);
+        ];
+
+        return $this->render('product/detail.html.twig', $data);
     }
 }

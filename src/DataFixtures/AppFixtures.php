@@ -29,7 +29,7 @@ class AppFixtures extends Fixture
         $azzam->setName('Azzam');
         $azzam->setDescription("Un modeste Yacht");
         $azzam->setPicture("./img/super-yacht-720x320.jpg");
-        $azzam->setPrice("500000000");
+        $azzam->setPrice("50000000");
         $azzam->setMaterials("Bois");
         $azzam->setBerths("14");
         $azzam->setPropulsion("Moteur");
@@ -43,7 +43,7 @@ class AppFixtures extends Fixture
         $history_supreme->setName('History Supreme');
         $history_supreme->setDescription("Le Yacht le plus cher du monde, une nouvelle collection dans votre port ?");
         $history_supreme->setPicture("./img/history-supreme-yacht.png");
-        $history_supreme->setPrice("5000000000");
+        $history_supreme->setPrice("500000000");
         $history_supreme->setMaterials("Bois");
         $history_supreme->setBerths("14");
         $history_supreme->setPropulsion("Moteur");

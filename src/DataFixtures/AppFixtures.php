@@ -19,7 +19,7 @@ class AppFixtures extends Fixture
         $Old_Boat->setName("Vieux Bateaux");
 
         $waste = new Category();
-        $Old_Boat->setName("Débris");
+        $waste->setName("Débris");
 
         $manager->persist($yacht);
         $manager->persist($Old_Boat);
@@ -40,6 +40,7 @@ class AppFixtures extends Fixture
         $black_pearl->setHeliport("1");
         $black_pearl->setSpeed("31.5");
         $black_pearl->setCategory($Old_Boat);
+        $black_pearl->setNbViews('0');
 
         $manager->persist($black_pearl);
 
@@ -60,6 +61,7 @@ Sa construction a duré 3 ans. Il a été dessiné par Mubarak al Ahbabi et déc
         $azzam->setHeliport("1");
         $azzam->setSpeed("31.5");
         $azzam->setCategory($yacht);
+        $azzam->setNbViews('0');
 
         $manager->persist($azzam);
 
@@ -77,7 +79,8 @@ Sa construction a duré 3 ans. Il a été dessiné par Mubarak al Ahbabi et déc
         $history_supreme->setPower("94000");
         $history_supreme->setHeliport("1");
         $history_supreme->setSpeed("31.5");
-        $azzam->setCategory($yacht);
+        $history_supreme->setCategory($yacht);
+        $history_supreme->setNbViews("0");
 
         $manager->persist($history_supreme);
 
@@ -95,7 +98,8 @@ Sa construction a duré 3 ans. Il a été dessiné par Mubarak al Ahbabi et déc
         $Oulala->setPower("0");
         $Oulala->setHeliport("0");
         $Oulala->setSpeed("0");
-        $azzam->setCategory($waste);
+        $Oulala->setCategory($waste);
+        $Oulala->setNbViews("0");
 
         $manager->persist($Oulala);
 

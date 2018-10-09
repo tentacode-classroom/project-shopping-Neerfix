@@ -1,16 +1,42 @@
 {% extends 'base.html.twig' %}
-{% block title %}Produit{% endblock %}
+{% block title %}{{ boat.name }}{% endblock %}
 
 {% block content %}
 
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center" style="background: url('.{{ boat.picture }}');">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 font-weight-normal">{{ boat.name }}</h1>
-        <p class="lead font-weight-normal">{{ boat.description }}</p>
-        <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+<main role="main" class="container">
+
+    <div class="media">
+        <img class="mr-3" width="50%" src="../{{ boat.picture }}" alt="{{ boat.name }}">
+        <div class="media-body">
+            <h1 class="mt-0">{{ boat.name }} - {{ boat.NbViews }} vues</h1>
+            <i>{{ boat.price|number_format }} $</i><br />
+            <p>{{ boat.description }}</p>
+        </div>
     </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-</div>
+
+    <br />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>longueur</th>
+            <td>{{ boat.length|number_format }}m</td>
+            <th>largeur</th>
+            <td>{{ boat.width|number_format }}m</td>
+            <th>Cabine</th>
+            <td>{{ boat.berths }}</td>
+        </tr>
+        <tr>
+            <th>Vitesse</th>
+            <td>{{ boat.speed }} nds</td>
+            <th>Puissance</th>
+            <td>{{ boat.power|number_format }} ch</td>
+            <th>Héliports</th>
+            <td>{{ boat.heliport|number_format }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</main><!-- /.container -->
 
 {% endblock %}

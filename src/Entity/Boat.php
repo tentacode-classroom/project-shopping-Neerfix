@@ -52,19 +52,45 @@ class Boat
     private $Width;
 
     /**
-     * @ORM\Column(type="float")
-     */
-    private $Weight;
-
-    /**
      * @ORM\Column(type="integer")
      */
     private $berths;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=255)
      */
     private $propulsion;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $speed;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $power;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $heliport;
+
+    /**
+     * @ORM\Column(type="string", length=4)
+     */
+    private $created_year;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $NbViews;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="boats")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
 
     public function getId(): ?int
     {
@@ -155,18 +181,6 @@ class Boat
         return $this;
     }
 
-    public function getWeight(): ?float
-    {
-        return $this->Weight;
-    }
-
-    public function setWeight(float $Weight): self
-    {
-        $this->Weight = $Weight;
-
-        return $this;
-    }
-
     public function getBerths(): ?int
     {
         return $this->berths;
@@ -187,6 +201,82 @@ class Boat
     public function setPropulsion(string $propulsion): self
     {
         $this->propulsion = $propulsion;
+
+        return $this;
+    }
+
+    public function getSpeed(): ?float
+    {
+        return $this->speed;
+    }
+
+    public function setSpeed(float $speed): self
+    {
+        $this->speed = $speed;
+
+        return $this;
+    }
+
+    public function getPower(): ?int
+    {
+        return $this->power;
+    }
+
+    public function setPower(int $power): self
+    {
+        $this->power = $power;
+
+        return $this;
+    }
+
+    public function getHeliport(): ?int
+    {
+        return $this->heliport;
+    }
+
+    public function setHeliport(int $heliport): self
+    {
+        $this->heliport = $heliport;
+
+        return $this;
+    }
+
+    public function getCreatedYear(): ?string
+    {
+        return $this->created_year;
+    }
+
+    public function setCreatedYear(string $created_year): self
+    {
+        $this->created_year = $created_year;
+
+        return $this;
+    }
+
+    public function getNbViews(): ?int
+    {
+        return $this->NbViews;
+    }
+
+    public function setNbViews(int $NbViews): self
+    {
+        $this->NbViews = $NbViews;
+
+        return $this;
+    }
+
+    public function incrementViews() {
+        $this->NbViews++;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

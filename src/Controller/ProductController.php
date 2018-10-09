@@ -18,14 +18,18 @@ class ProductController extends AbstractController
     /**
      * @Route("/product/{productId}", name="product_detail")
      */
+
     public function index(int $productId)
     {
+
         $boat = $this->getDoctrine()->getRepository(Boat::class)->find($productId);
 
-        if(!$boat){
-            var_dump($boat);
-            throw $this->createNotFoundException('No product with id ' . $productId);
-        }
+        $boat->incrementViews();
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($boat);
+        $entityManager->flush();
+
 
         $data = [
             'slug' => $productId,

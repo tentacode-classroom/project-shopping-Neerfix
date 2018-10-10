@@ -1,0 +1,18 @@
+Symfony is great: J'aime Symfony
+Home: Accueil
+Login: Connexion
+Username: Nom d'utilisateur
+Password: Mot de passe
+Logout: Déconnexion
+length: longueur
+width: largeur
+berths: cabine
+speed: vitesse
+power: puissance
+heliport: héliport
+Administration: Administration
+Boat'Ik is a simple shop to buy a beautifull boat ! Be careful though to surprises :p: Boat'Ik est une boutique simple qui vous permet d'acheter un jolie bateau ! Attention cependant aux surprises :p
+More Infos: Plus d'infos
+Search: Rechercher
+view|views: vue|vues
+'{0} No view|{1} %viewCounter% view |]1,Inf[ %viewCounter%  views': '{0} aucune vue|{1} %viewCounter% vue |]1,Inf[ %viewCounter%  vues'

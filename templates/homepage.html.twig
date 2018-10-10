@@ -4,10 +4,9 @@
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Boat'Ik</h1>
-        <p class="lead text-muted">Boat'Ik est une boutique simple qui vous permet d'acheter un jolie bateau ! Attention cependant aux surprises :p </p>
+        <p class="lead text-muted">{% trans %}Boat'Ik is a simple shop to buy a beautifull boat ! Be careful though to surprises :p{% endtrans %}</p>
         <p>
-            <a href="#" class="btn btn-primary my-2">Main call to action</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            <a href="#" class="btn btn-primary my-2">{% trans %}Symfony is great{% endtrans %}</a>
         </p>
     </div>
 </section>
@@ -26,7 +25,7 @@
                             <div class="btn-group">
                                 <a href="{{ path('product_detail', {
                         'productId': boat.id
-                    }) }}" class="btn btn-sm btn-success">Plus d'infos</a>
+                    }) }}" class="btn btn-sm btn-success">{% trans %}More Infos{% endtrans %}</a>
                                 <button type="button" class="btn btn-sm btn-dark">{{ boat.materials }}</button>
                             </div>
                             <span class="badge badge-danger" style="position: relative; right: 30px;">{{ boat.price|number_format }} $</span>

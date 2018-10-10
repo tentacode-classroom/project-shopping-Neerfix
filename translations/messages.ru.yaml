@@ -1,0 +1,17 @@
+Symfony is great : Симфонии отлично
+Home: Главная
+Login: авторизоваться
+username: имя пользователя
+password: пароль
+logout: выйти
+length: длина
+width: ширина
+berths: причалы
+speed: скорость
+power: мощность
+heliport: вертодром
+Boat'Ik is a simple shop to buy a beautifull boat ! Be careful though to surprises :p: Boat'Ik - простой магазин, чтобы купить прекрасную лодку! Будьте осторожны, хотя и удивляйтесь
+More Infos: больше информации
+Search: поиск
+Administration: администрация
+'{0} No view|{1} %viewCounter% view |]1,Inf[ %viewCounter%  views': '{0} нет представления|{1} %viewCounter% вид |]1,Inf[ %viewCounter%  мнения'

@@ -8,7 +8,10 @@
     <div class="media">
         <img class="mr-3" width="50%" src="../{{ boat.picture }}" alt="{{ boat.name }}">
         <div class="media-body">
-            <h1 class="mt-0">{{ boat.name }} - {{ boat.NbViews }} vues</h1>
+            <h1 class="mt-0">{{ boat.name }} - {% set viewCounter = boat.NbViews %}
+                {% transchoice viewCounter %}
+                {0} No view|{1} %viewCounter% view |]1,Inf[ %viewCounter%  views
+                {% endtranschoice %}</h1>
             <i>{{ boat.price|number_format }} $</i><br />
             <p>{{ boat.description }}</p>
         </div>
@@ -18,19 +21,19 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>longueur</th>
+            <th>{% trans %}length{% endtrans %}</th>
             <td>{{ boat.length|number_format }}m</td>
-            <th>largeur</th>
+            <th>{% trans %}width{% endtrans %}</th>
             <td>{{ boat.width|number_format }}m</td>
-            <th>Cabine</th>
+            <th>{% trans %}berths{% endtrans %}</th>
             <td>{{ boat.berths }}</td>
         </tr>
         <tr>
-            <th>Vitesse</th>
+            <th>{% trans %}speed{% endtrans %}</th>
             <td>{{ boat.speed }} nds</td>
-            <th>Puissance</th>
+            <th>{% trans %}power{% endtrans %}</th>
             <td>{{ boat.power|number_format }} ch</td>
-            <th>Héliports</th>
+            <th>{% trans %}heliport{% endtrans %}</th>
             <td>{{ boat.heliport|number_format }}</td>
         </tr>
         </tbody>

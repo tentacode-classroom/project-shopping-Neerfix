@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a87217ef07d13b77d7b2af4e5552aeb2",
+    "content-hash": "1609e218401d61411f9e6fb1a0b86ed2",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3917,16 +3917,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v4.1.4",
+            "version": "v4.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "03f68de271c2a5fdddf9f41b25ef80bc1ddf303b"
+                "reference": "be4456eb61bb142342a7c9a41e4127783b077a86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/03f68de271c2a5fdddf9f41b25ef80bc1ddf303b",
-                "reference": "03f68de271c2a5fdddf9f41b25ef80bc1ddf303b",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/be4456eb61bb142342a7c9a41e4127783b077a86",
+                "reference": "be4456eb61bb142342a7c9a41e4127783b077a86",
                 "shasum": ""
             },
             "require": {
@@ -3993,7 +3993,7 @@
             ],
             "description": "Symfony SecurityBundle",
             "homepage": "https://symfony.com",
-            "time": "2018-08-18T16:52:46+00:00"
+            "time": "2018-10-02T12:40:59+00:00"
         },
         {
             "name": "symfony/serializer",
@@ -4170,16 +4170,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v4.1.4",
+            "version": "v4.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "fa2182669f7983b7aa5f1a770d053f79f0ef144f"
+                "reference": "9f0b61e339160a466ebcde167a6c5521c810e304"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/fa2182669f7983b7aa5f1a770d053f79f0ef144f",
-                "reference": "fa2182669f7983b7aa5f1a770d053f79f0ef144f",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/9f0b61e339160a466ebcde167a6c5521c810e304",
+                "reference": "9f0b61e339160a466ebcde167a6c5521c810e304",
                 "shasum": ""
             },
             "require": {
@@ -4235,7 +4235,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-07T12:45:11+00:00"
+            "time": "2018-10-02T16:36:10+00:00"
         },
         {
             "name": "symfony/twig-bridge",

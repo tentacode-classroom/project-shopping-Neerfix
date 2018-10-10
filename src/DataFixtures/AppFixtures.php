@@ -46,9 +46,7 @@ class AppFixtures extends Fixture
 
         $azzam = new Boat();
         $azzam->setName('Azzam');
-        $azzam->setDescription("L’Azzam est un immense yacht de luxe construit en 2013 par les chantiers Lürssen de Vegesack en Allemagne. Il appartient au Sheikh Khalifa ben Zayed Al Nahyane qui est l'émir d'Abou Dabi et le président des Émirats arabes unis. Le yacht est le plus grand yacht privé du monde1,2.
-
-Sa construction a duré 3 ans. Il a été dessiné par Mubarak al Ahbabi et décoré par Christophe Léoni. Le yacht peut emporter jusqu'à 1 000 000 litres de carburant.");
+        $azzam->setDescription("L’Azzam est un immense yacht de luxe construit en 2013 par les chantiers Lürssen de Vegesack en Allemagne. Il appartient au Sheikh Khalifa ben Zayed Al Nahyane qui est l'émir d'Abou Dabi et le président des Émirats arabes unis.");
         $azzam->setPicture("./img/super-yacht-720x320.jpg");
         $azzam->setPrice("457000000");
         $azzam->setMaterials("Bois");
